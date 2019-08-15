@@ -1,0 +1,25 @@
+{
+  "name": "pdf-from-html",
+  "version": "1.0.0",
+  "description": "PDF Generator terminal or in node server",
+  "main": "index.js",
+  "bin": {
+    "pdf-from-html": "bin/exec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "JavaScript",
+    "puppeteer",
+    "PDF",
+    "NodeJS"
+  ],
+  "author": "TecladistaProd",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "puppeteer": "^1.19.0"
+  }
+}

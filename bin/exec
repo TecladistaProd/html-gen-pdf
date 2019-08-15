@@ -1,0 +1,77 @@
+#!/usr/bin/env node
+
+const args = require("minimist")(process.argv);
+
+if (args.h || args.help) {
+  console.log(`
+  PDF-FROM-HTML
+    -v or --version to show package version
+    example to create a pdf from html, using terminal in folder where is html file, use 
+this command \`pdf-from-html -i ./index.html -n ./file.pdf -f A4\`.
+    -i or --input-file is to specify the html file
+    -o or --output-file is to specify the file name to output
+    -f or --format is paper format (A4 by default)
+    -l or --landscape to use pdf orientation
+    You may ignore format and orientation options if want to use default
+
+    paper formats
+
+      - portrait
+      - landscape
+
+    Types of format paper
+      - Letter
+      - Legal
+      - Tabloid
+      - Ledger
+      - A0
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+  `);
+} else if (args.v || args.version) {
+  console.log(`Version ${require("../package.json").version}`);
+} else {
+  const path = require("path");
+
+  let htmlFile =
+    args.i ||
+    args["input-file"] ||
+    (() => {
+      console.error(
+        "You should pass html file, if you have any doubt please acess 'help' `pdf-from-html -h` "
+      );
+      process.exit(1);
+    })();
+
+  htmlFile = path.resolve(htmlFile);
+
+  let pdfFile =
+    args.o ||
+    args["output-file"] ||
+    (() => {
+      console.error(
+        "You should pass pdf file name, if you have any doubt please acess 'help' `pdf-from-html -h` "
+      );
+      process.exit(1);
+    })();
+
+  pdfFile = path.resolve(pdfFile);
+
+  const printOpt = {
+    format: args.f || args.format || "A4",
+    landscape: args.l || false
+  };
+
+  (async () => {
+    try {
+      await require("..")(htmlFile, pdfFile, printOpt);
+      console.log("It's Done");
+    } catch (err) {
+      console.log(err.message);
+    }
+  })();
+}

@@ -1,12 +1,18 @@
-# html-to-pdf
+# html-gen-pdf
 
 Module to generate pdf file from html file using puppeteer.
 
 This lib is both to use by terminal and js file.
 
+## Installing
+
+In a node project `npm i -s html-gen-pdf` or `yarn add html-gen-pdf`
+
+In global mode `npm i -g html-gen-pdf` or `yarn global add html-gen-pdf`
+
 ## Terminal use
 
-To use in terminal to create a pdf from html, using terminal in folder where is html file, use this command `html-to-pdf -i ./index.html -n ./file.pdf -f A4`.
+To use in terminal to create a pdf from html, using terminal in folder where is html file, use this command `html-gen-pdf -i ./index.html -n ./file.pdf -f A4`.
 
 ### Terminal Commands
 
@@ -23,7 +29,7 @@ To use in terminal to create a pdf from html, using terminal in folder where is 
 _app.js_
 
 ```javascript
-const toPdf = require("html-to-pdf");
+const toPdf = require("html-gen-pdf");
 
 toPdf("./index.html", "./just_example.pdf", {
   format: "A4",

@@ -1,14 +1,14 @@
 {
-  "name": "html-to-pdf",
+  "name": "html-gen-pdf",
   "version": "1.0.0",
   "description": "PDF Generator terminal or in node server",
   "main": "index.js",
   "bin": {
-    "html-to-pdf": "bin/exec"
+    "html-gen-pdf": "bin/exec"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TecladistaProd/html-to-pdf"
+    "url": "https://github.com/TecladistaProd/html-gen-pdf"
   },
   "keywords": [
     "JavaScript",

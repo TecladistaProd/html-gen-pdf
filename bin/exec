@@ -4,20 +4,15 @@ const args = require("minimist")(process.argv);
 
 if (args.h || args.help) {
   console.log(`
-  PDF-FROM-HTML
+  HTML-GEN-PDF
     -v or --version to show package version
     example to create a pdf from html, using terminal in folder where is html file, use 
-this command \`pdf-from-html -i ./index.html -n ./file.pdf -f A4\`.
+this command \`html-gen-pdf -i ./index.html -n ./file.pdf -f A4\`.
     -i or --input-file is to specify the html file
     -o or --output-file is to specify the file name to output
     -f or --format is paper format (A4 by default)
     -l or --landscape to use pdf orientation
     You may ignore format and orientation options if want to use default
-
-    paper formats
-
-      - portrait
-      - landscape
 
     Types of format paper
       - Letter
@@ -42,7 +37,7 @@ this command \`pdf-from-html -i ./index.html -n ./file.pdf -f A4\`.
     args["input-file"] ||
     (() => {
       console.error(
-        "You should pass html file, if you have any doubt please acess 'help' `pdf-from-html -h` "
+        "You should pass html file, if you have any doubt please acess 'help' `html-gen-pdf -h` "
       );
       process.exit(1);
     })();
@@ -54,7 +49,7 @@ this command \`pdf-from-html -i ./index.html -n ./file.pdf -f A4\`.
     args["output-file"] ||
     (() => {
       console.error(
-        "You should pass pdf file name, if you have any doubt please acess 'help' `pdf-from-html -h` "
+        "You should pass pdf file name, if you have any doubt please acess 'help' `html-gen-pdf -h` "
       );
       process.exit(1);
     })();

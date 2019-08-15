@@ -1,4 +1,4 @@
-# PDF-FROM-HTML
+# html-to-pdf
 
 Module to generate pdf file from html file using puppeteer.
 
@@ -6,7 +6,7 @@ This lib is both to use by terminal and js file.
 
 ## Terminal use
 
-To use in terminal to create a pdf from html, using terminal in folder where is html file, use this command `pdf-from-html -i ./index.html -n ./file.pdf -f A4`.
+To use in terminal to create a pdf from html, using terminal in folder where is html file, use this command `html-to-pdf -i ./index.html -n ./file.pdf -f A4`.
 
 ### Terminal Commands
 
@@ -23,7 +23,7 @@ To use in terminal to create a pdf from html, using terminal in folder where is 
 _app.js_
 
 ```javascript
-const toPdf = require("pdf-from-html");
+const toPdf = require("html-to-pdf");
 
 toPdf("./index.html", "./just_example.pdf", {
   format: "A4",

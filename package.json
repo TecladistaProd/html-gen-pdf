@@ -1,10 +1,10 @@
 {
-  "name": "pdf-from-html",
+  "name": "html-to-pdf",
   "version": "1.0.0",
   "description": "PDF Generator terminal or in node server",
   "main": "index.js",
   "bin": {
-    "pdf-from-html": "bin/exec"
+    "html-to-pdf": "bin/exec"
   },
   "repository": {
     "type": "git",
